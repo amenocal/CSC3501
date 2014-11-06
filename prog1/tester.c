@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <assert.h>
+/*
+ * This program tests int2bitstr by printing out any 32-bit integer as a 
+ * 32-length string of zeros and ones.  The number is also printed in hex
+ * with formated binary for correctness checking.
+ */
+int main(void)
+{
+   char str[33], hex[5];
+   int i;
+   void int2bitstr(unsigned int I, char *str);
+
+   hex[4] = '\0';
+   do
+   {
+      int k;
+
+      printf("Enter integer to convert to bits: ");
+      assert(scanf("%d", &i) == 1);
+      int2bitstr(i, str);
+      printf("%d : %s\n", i, str);
+/*
+ *    Now print out binary numbers 4 digits at a time for hex confirmation
+ */
+      printf("%x : ", i);
+      for (k=0; k < 32; k += 4)
+      {
+         char *sp = str + k;
+         hex[0] = sp[0];
+         hex[1] = sp[1];
+         hex[2] = sp[2];
+         hex[3] = sp[3];
+         printf("%s ", hex);
+      }
+      printf("\n");
+   }
+   while(i);
+   return(0);  /* signal normal completion */
+}
