@@ -1,3 +1,12 @@
-Couple of programs done in the Computer Architecture class at LSU - CSC 3501
+##Couple of programs done in the Computer Architecture class at LSU - CSC 3501
 
-Prog1: Basic bit-level operations
+##Prog1: Basic bit-level operations
+Does bit-level operations
+
+##Prog2: Basic IA32 assembly and argumnet handling
+Wrote a basic IA32 assembly routing using gnu assembly.
+ - Return i1 + i2
+ - sets *i3 = 5*(*i3)
+ - writes the lower-case alphabet to string
+
+
